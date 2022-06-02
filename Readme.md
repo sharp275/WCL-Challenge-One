@@ -96,7 +96,7 @@ Into index.html, paste the source code from https://challengetask10049.s3.amazon
 
 When you navigate to http://*your-instance-ipv4-address*/admin, you will see the following:
 <p align="center">
-  <img src="Admin login page.jpg">
+  <img src="admin login page.jpg">
 </p>
 
 <h4>Create the User instance</h4>

@@ -200,5 +200,5 @@ Add rules for admin and user.  Under **IF (all match)**, Choose Path and enter e
 Now requests to the load balancer that have either /admin or /user in them will go to the correct instance and all other will get a response of "Whizlabs ELB Challenge".
 
 <p align="center">
-  <img width="800" src="validation.jpg">
+  <img width="800" src="Validation.jpg">
 </p>

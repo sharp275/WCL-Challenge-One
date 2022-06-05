@@ -8,7 +8,7 @@ Challenge Lab One
 
 ---
 
-WhizLabs is running a cloud challenge between May and July 2022.  The challenge is to complete various tasks in either AWS, GCP, or Azure to test cloud skills.  Following is my solution to challenge lab one.
+Whizlabs is running a cloud challenge between May and July 2022.  The challenge is to complete various tasks in either AWS, GCP, or Azure to test cloud skills.  Following is my solution to challenge lab one.
 
 ---
 <h3>From Whizlabs</h3>

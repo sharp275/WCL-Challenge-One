@@ -45,18 +45,18 @@ Follow the instructions given below to work on the challenge.
 Login into AWS and search/choose *EC2*.
 
 <p align="center">
-  <img width="800" src="AWS EC2 choose.jpeg">
+  <img width="1000" src="AWS EC2 choose.jpeg">
 </p>
 
 Click *Launch instance* then *Launch instance*.
 <p align="center">
-  <img width="800" src="Launch EC2.jpeg">
+  <img width="1000" src="Launch EC2.jpeg">
 </p>
 
 Enter a name, I used Admin.  The default **Application and OS images**, and the default **Instance type** should be correct.  Click *Create new key pair*.
 
 <p align="center">
-  <img width="800" src="Admin EC2 One.jpg">
+  <img width="1000" src="Admin EC2 One.jpg">
 </p>
 
 Create a new key pair approiate for the method to be used to connect by SSH to the instance.  The settings I used are for Putty.
@@ -110,7 +110,7 @@ For the user instance repeat the creation of the admin instance and substitute u
 Create a new security group to allow both inbound and outbound HTTP traffic.
 
 <p align="center">
-  <img width="800" src="security group.jpg">
+  <img width="1000" src="security group.jpg">
 </p>
 
 Create a target for the load balancer.
@@ -124,32 +124,32 @@ Under **Health Checks**, the protocol is *HTTP* and the path is <code>/user</cod
 Click *Next*.
 
 <p align="center">
-  <img width="800" src="target group 1.jpg">
+  <img width="1000" src="target group 1.jpg">
 </p>
 
 
 On the next page, check the box for the user instance and click *Include as pending below*.
 
 <p align="center">
-  <img width="800" src="target group 2.jpg">
+  <img width="1000" src="target group 2.jpg">
 </p>
 
 The instance will appear in Review targets.  Click Create target group.
 
 <p align="center">
-  <img width="800" src="target group 3.jpg">
+  <img width="1000" src="target group 3.jpg">
 </p>
 
 Under **EC2** > >**Load Balancing** > **Load balancers**, click *Create Load Balancer*.
 
 <p align="center">
-  <img width="800" src="create alb.jpg">
+  <img width="1000" src="create alb.jpg">
 </p>
 
 Select *Application Load Balancer*.
 
 <p align="center">
-  <img width="800" src="Select App.jpg">
+  <img width="1000" src="Select App.jpg">
 </p> 
 
 Enter a name for the load balancer.
@@ -160,13 +160,13 @@ Under network mapping > mappings, check all the availability zones.
 
 Choose the security group created earlier.
 <p align="center">
-  <img width="800" src="app load 1.jpg">
+  <img width="1000" src="app load 1.jpg">
 </p>
 
 Under Listeners and routing, choose one of the earlier created target groups. Click *Create load balancer*.
 
 <p align="center">
-  <img width="800" src="app load 2.jpg">
+  <img width="1000" src="app load 2.jpg">
 </p>
 
 Back on **Load Balancers**, the address of the load balancer is listed by **DNS name**.
@@ -174,7 +174,7 @@ Back on **Load Balancers**, the address of the load balancer is listed by **DNS 
 Click on **Listeners**.
 
 <p align="center">
-  <img width="800" src="app load 3.jpg">
+  <img width="1000" src="app load 3.jpg">
 </p>
 
 update the listener, choose View/edit rules.
@@ -182,11 +182,11 @@ Click the *Pencil* to edit the default rule.  Change it to **Return fixed respon
 Click **Update**.
 
 <p align="center">
-  <img width="800" src="app load 4.jpg">
+  <img width="1000" src="app load 4.jpg">
 </p>
 
 <p align="center">
-  <img width="800" src="app load 5.jpg">
+  <img width="1000" src="app load 5.jpg">
 </p>
 
 Click Plus <img src="plus.jpg"> to add a rule.
@@ -194,11 +194,11 @@ Click Plus <img src="plus.jpg"> to add a rule.
 Add rules for admin and user.  Under **IF (all match)**, Choose Path and enter either <code>/admin*</code> or <code>/user*</code>.  Choose to forward to the correct target group
 
 <p align="center">
-  <img width="800" src="app load 6.jpg">
+  <img width="1000" src="app load 6.jpg">
 </p>
 
 Now requests to the load balancer that have either /admin or /user in them will go to the correct instance and all other will get a response of "Whizlabs ELB Challenge".
 
 <p align="center">
-  <img width="800" src="Validation.jpg">
+  <img width="1000" src="Validation.jpg">
 </p>
